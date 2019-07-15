@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "blogTitle": "Title lorem ipsum",
+    "subTitle": "subtitle",
+    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aliquam dignissimos architecto ad similique aperiam, reiciendis voluptates est necessitatibus facilis minus laudantium? Molestiae architecto ducimus dignissimos tempore facilis praesentium obcaecati.",
+    "submittedBy": "John Doe",
+    "views": "1,234",
+    "Link": "/",
+    "backgroundImage": "https://images.pexels.com/photos/372098/pexels-photo-372098.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+  },
+  {
+    "id": 2,
+    "blogTitle": "Title lorem ipsum",
+    "subTitle": "subtitle",
+    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aliquam dignissimos architecto ad similique aperiam, reiciendis voluptates est necessitatibus facilis minus laudantium? Molestiae architecto ducimus dignissimos tempore facilis praesentium obcaecati.",
+    "submittedBy": "John Doe",
+    "views": "1,234",
+    "Link": "/",
+    "backgroundImage": "http://trekkersholidays.com/wp-content/uploads/2017/01/travel1.jpg"
+  }
+]

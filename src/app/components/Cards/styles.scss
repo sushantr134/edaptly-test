@@ -1,0 +1,242 @@
+@import "../../app-global.module.scss";
+
+.cardContainer {
+  border: 1px solid grey;
+  border-radius: 0.3em;
+  box-shadow: 3px 2px 8px lightgrey;
+  margin-top: 2em;
+  position: relative;
+  z-index: 100;
+  &[data-card="one"] {
+    width: 90%;
+    min-width: 280px;
+    max-width: 360px;
+  }
+  &[data-card="two"] {
+    width: 90%;
+    min-width: 430px;
+    max-width: 560px;
+    height: 40vh;
+    max-height: 430px;
+    border-radius: 1.5em;
+    padding: 1em;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  &[data-card="three"] {
+    width: 90%;
+    position: relative;
+    min-width: 430px;
+    max-width: 560px;
+    height: 40vh;
+    max-height: 430px;
+    border-radius: 1.5em;
+    @include gridMaker(1fr 1fr, none, 1em);
+    justify-items: center;
+  }
+}
+
+.leftPart {
+  width: 100%;
+
+  position: relative;
+  &::before {
+    content: "";
+    z-index: 102;
+    position: absolute;
+    right: -0.3em;
+    width: 40px;
+    height: 100%;
+    padding: 1em;
+    background: #fdae6d;
+  }
+  .photoContainer {
+    position: absolute;
+    bottom: 2rem;
+    right: 1rem;
+    z-index: 120;
+    width: 290px;
+    height: 35vh;
+    border-radius: 1em;
+    max-height: 220px;
+    box-shadow: 0 0 10px black;
+  }
+  .tagsContainer {
+    position: absolute;
+    width: 100%;
+    bottom: 1%;
+    margin-top: 1.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 0.55em;
+    & > span {
+      background: rgba(rgb(12, 12, 117), 0.4);
+      color: white;
+      font-size: 10px;
+      text-align: center;
+      border-radius: 1em;
+      width: 55px;
+      padding: 0.4em;
+      margin-right: 1em;
+    }
+  }
+}
+
+.rightPart {
+  position: relative;
+}
+.tagline {
+  position: absolute;
+  top: 2%;
+  width: 100%;
+  @include gridMaker(1fr 1fr, none, 1em);
+  justify-items: center;
+  color: white;
+  .one {
+    text-align: left;
+    width: 100%;
+    font-size: 12px;
+    padding-left: 4em;
+    text-transform: uppercase;
+  }
+  .two {
+    background: rgba(1, 1, 1, 0.5);
+    padding: 0.4em;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 2px;
+    margin-left: 53%;
+  }
+
+  &[data-card="three"] {
+    .one {
+      color: #fdae6d;
+      font-weight: bold;
+      padding-left: 1em;
+    }
+    .two {
+      margin-left: 3em;
+    }
+  }
+}
+
+.overlay {
+  position: absolute;
+  z-index: -100;
+  width: 100%;
+  height: 100%;
+  bottom: -3%;
+  overflow: hidden;
+  background: linear-gradient(transparent, #fdae6d);
+}
+.cardupper {
+  width: 100%;
+  height: 38vh;
+  max-height: 350px;
+}
+
+.cardlower {
+  &[data-card="one"] {
+    & > h1,
+    h3 {
+      color: $primary-blue;
+      margin-bottom: 0.4em;
+      text-align: left;
+    }
+    position: relative;
+    & > p {
+      text-align: left;
+      font-size: 0.88rem;
+      letter-spacing: 0.5px;
+      padding-bottom: 0.55em;
+    }
+
+    a {
+      position: absolute;
+      right: 5%;
+      bottom: -1%;
+      font-size: 0.88rem;
+      color: #fdae6d;
+      font-weight: bold;
+      margin-bottom: 0.5em;
+      text-align: right;
+    }
+
+    padding: 1em;
+    margin-bottom: 0.55em;
+  }
+  &[data-card="two"] {
+    position: relative;
+    & > h1,
+    h3 {
+      color: white;
+      margin-bottom: 0.4em;
+      text-align: left;
+      text-transform: uppercase;
+      letter-spacing: 0.44px;
+    }
+    & > p {
+      text-align: left;
+      color: white;
+      font-size: 0.78rem;
+      letter-spacing: 0.5px;
+      padding-bottom: 0.55em;
+    }
+
+    a {
+      position: absolute;
+      right: 3%;
+      bottom: -2%;
+      font-size: 0.88rem;
+      color: #052c76;
+      font-weight: bold;
+      margin-bottom: 0.5em;
+      text-align: right;
+    }
+  }
+
+  &[data-card="three"] {
+    margin-top: 3em;
+    position: relative;
+    & > h1,
+    h3 {
+      color: $primary-blue;
+      margin-bottom: 0.4em;
+      text-align: left;
+      text-transform: capitalize;
+      letter-spacing: 0.44px;
+    }
+    & > p {
+      text-align: left;
+      color: black;
+      padding-top: 1em;
+      font-size: 0.98rem;
+      letter-spacing: 0.5px;
+      padding-bottom: 1.55em;
+    }
+
+    a {
+      position: absolute;
+      right: 8%;
+      bottom: -1%;
+      font-size: 0.88rem;
+      color: #fdae6d;
+      font-weight: bold;
+      margin-bottom: 0.5em;
+      text-align: right;
+    }
+  }
+}
+
+.cardfooter {
+  color: red;
+  .userPic {
+    color: red;
+  }
+  .views {
+    color: red;
+  }
+}

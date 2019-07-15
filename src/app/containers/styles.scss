@@ -1,0 +1,25 @@
+@import "../app-global.module.scss";
+
+.featuredBlogContainer,
+.latestBlogContainer,
+.allblogscontainer {
+  width: 100%;
+  padding: 1em 2em 1em 2em;
+  border: 1px solid gray;
+  box-shadow: 0 0 8px lightgray;
+  border-radius: 2em;
+  margin-bottom: 2em;
+  & > h1 {
+    color: black;
+    margin-bottom: 1em;
+  }
+}
+
+.blogcardsContainer {
+  @include gridMaker(repeat(auto-fit, minmax(350px, 1fr)), none, 1em);
+
+  &[data-container="all"] {
+    @include gridMaker(1fr 1fr, none, 1em);
+  }
+  justify-items: center;
+}
