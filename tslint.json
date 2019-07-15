@@ -15,7 +15,8 @@
     "eofline": false,
     "indent": [false, "tabs"],
     "max-line-length": [true, 250],
-    "no-trailing-whitespace": true,
+    "no-trailing-whitespace": false,
+    "jsx-no-multiline-js":false,
     "trailing-comma": [
       true,
       {

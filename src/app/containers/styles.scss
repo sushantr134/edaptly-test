@@ -20,6 +20,13 @@
 
   &[data-container="all"] {
     @include gridMaker(1fr 1fr, none, 1em);
+
+    @media screen and (max-width:1251px) {
+         &
+         {
+          @include gridMaker(repeat(auto-fit,minmax(300px,1fr)), none, 1em);
+         }
+    }
   }
   justify-items: center;
 }

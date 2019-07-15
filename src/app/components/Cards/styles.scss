@@ -40,7 +40,7 @@
 
 .leftPart {
   width: 100%;
-
+  @include alignCenter;
   position: relative;
   &::before {
     content: "";
@@ -54,7 +54,6 @@
   }
   .photoContainer {
     position: absolute;
-    bottom: 2rem;
     right: 1rem;
     z-index: 120;
     width: 290px;
