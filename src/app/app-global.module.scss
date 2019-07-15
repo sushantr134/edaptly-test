@@ -7,6 +7,20 @@
   font-family: "Raleway", sans-serif;
 }
 
-.heading {
-  color: darkblue;
+$primary-blue: #2f5ef3;
+
+body {
+  padding: 1em;
+}
+
+@mixin gridMaker($col, $row, $gap) {
+  display: grid;
+  grid-template-columns: $col;
+  grid-gap: $gap;
+}
+
+@mixin alignCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

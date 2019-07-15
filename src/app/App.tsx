@@ -1,12 +1,14 @@
 import * as React from "react";
-import styles from "./app-global.module.scss";
 
-import Sushant from "./components/sushant/component";
+import LatestBlog from "./containers/LatestBlog";
+import FeaturedBlog from "./containers/FeaturedBlog";
+import AllBlog from "./containers/AllBlog";
 
 const App: React.FunctionComponent<{}> = () => (
   <>
-    <h1 className={styles.heading}>Scss modules working...</h1>
-    <Sushant name={"sda"} />
+    <LatestBlog />
+    <FeaturedBlog />
+    <AllBlog />
   </>
 );
 export default App;

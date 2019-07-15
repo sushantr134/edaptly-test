@@ -35,7 +35,7 @@ module.exports = {
       },
       {
         test: [/\.svg$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
-        loader: "file-loader"
+        loader: ["file-loader", "url-loader"]
       },
       {
         test: /\.(eot|otf|woff|woff2|ttf)(\?\S*)?$/,
@@ -57,7 +57,7 @@ module.exports = {
   plugins: [
     new htmlWebpackPlugin({ template: path.resolve(__dirname, "./src/index.html"), meta: { "theme-color": "#c689ff" } }),
     new MiniCssExtractPlugin({
-      filename: "spotify-style.css",
+      filename: "edaptly-style.css",
       chunkFilename: "[id].css"
     }),
     new webpack.HotModuleReplacementPlugin(),
@@ -76,7 +76,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "build"),
     publicPath: "/",
-    filename: "spotify-bundle.js"
+    filename: "edaptly-bundle.js"
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js"]

@@ -10,6 +10,6 @@ WebFont.load({
   }
 });
 
-ReactDOM.render(<App />, document.getElementById("spotify-app-root"));
+ReactDOM.render(<App />, document.getElementById("edaptly-app-root"));
 
 //module.hot.accept();
